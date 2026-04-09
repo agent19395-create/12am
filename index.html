@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday My Chahat ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: #0d0d0d;
+  color: #f5f5f5;
+  overflow: hidden;
+}
+
+.page {
+  display: none;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px;
+}
+
+.active {
+  display: flex;
+}
+
+.message {
+  max-width: 700px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+button {
+  margin-top: 30px;
+  padding: 10px 25px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.clock {
+  font-size: 70px;
+  letter-spacing: 5px;
+}
+
+/* HEARTS */
+.heart {
+  position: fixed;
+  bottom: -10px;
+  color: #ff4d6d;
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-110vh); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active">
+  <div class="clock">12:00 AM</div>
+  <button onclick="next()">Open</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+  <h1>Happy Birthday My Chahat ❤️</h1>
+  <p>11 / 04 / 2026</p>
+  <button onclick="next()">Continue</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page">
+  <div class="message">
+    Today is the day when you've been came to the world  
+    for helping, supporting, and motivating this jerk.
+  </div>
+  <button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page">
+  <div class="message">
+    But this jerk kept falling... again and again...  
+    (chinnar giri chalte raha,chalte raha,chalte raha)...
+  </div>
+  <button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page">
+  <div class="message">
+    And then... 17/11/2025 happened.  
+    Someone held my hand.
+  </div>
+  <button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page">
+  <div class="message">
+    You didn’t just stay... you fought...  
+    you understood... you motivated... you just did every thing... 
+     you fixed what even I had given up on.
+  </div>
+  <button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 7 -->
+<div class="page">
+  <div class="message">
+    I stopped looking up for God that day...  
+    because I already had one beside me 🛐
+  </div>
+  <button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 8 -->
+<div class="page">
+  <div class="message">
+    After everything... anyone else would've left...  
+    but you didn’t.
+  </div>
+  <button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 9 -->
+<div class="page">
+  <div class="message">
+    And today... we’re still here, even after that much family conflicts and risks...  
+    our bond,relation,love is Still strong,Still ours.
+  </div>
+  <button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 10 -->
+<div class="page">
+  <div class="message">
+    I don’t think anyone could’ve done what you did...  
+    you changed yourself... and you changed me.
+  </div>
+  <button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 11 -->
+<div class="page">
+  <div class="message">
+    You didn’t just love me...  
+    you made me better human.
+  </div>
+  <button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 12 -->
+<div class="page">
+  <div class="message">
+    You are my world.  
+    My peace.  
+    My everything.
+  </div>
+  <button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 13 -->
+<div class="page">
+  <div class="message">
+    I love you, my chahat ❤️  
+    my baccha 😚
+  </div>
+  <button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 14 -->
+<div class="page">
+  <div class="message">
+    Happy Happy Happy Birthday ✨
+  </div>
+  <button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 15 -->
+<div class="page">
+  <div class="message">
+    And today...  
+    I’m happier than you...  
+    because today is the day you came into this world...  
+    for me ❤️
+  </div>
+  <button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 16 -->
+<div class="page">
+  <div class="message">
+                    I love you ❤️✨
+   
+    and remember... 
+    tujhse hi to mili hai rahat,tu hi to meri hai chahat...
+  </div>
+</div>
+
+<script>
+let pages = document.querySelectorAll(".page");
+let current = 0;
+
+function next() {
+  pages[current].classList.remove("active");
+  current++;
+  if (current < pages.length) {
+    pages[current].classList.add("active");
+  }
+}
+
+/* HEARTS */
+setInterval(() => {
+  let heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤";
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+  heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 5000);
+}, 250);
+</script>
+
+</body>
+</html>
